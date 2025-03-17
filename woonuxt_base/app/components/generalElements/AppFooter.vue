@@ -1,67 +1,85 @@
 <script setup lang="ts">
-const { wooNuxtVersionInfo } = useHelpers();
 const { wishlistLink } = useAuth();
 </script>
 
 <template>
-  <footer class="bg-white order-last">
-    <div class="container flex flex-wrap justify-between gap-12 my-24 md:gap-24">
-      <div class="mr-auto">
+  <footer class="bg-white text-bordeaux order-last">
+    <div class="container flex flex-wrap justify-between gap-12 my-12 md:gap-24">
+      <!-- Logo et Description -->
+      <div class="mr-auto mb-6 md:mb-0">
         <Logo />
-        <WebsiteShortDescription />
-        <LangSwitcher class="mt-8" />
+        <WebsiteShortDescription class="mt-4" />
+        <LangSwitcher class="mt-4" />
       </div>
-      <div class="w-3/7 lg:w-auto">
-        <div class="mb-1 font-semibold">Information</div>
-        <div class="text-sm">
-          <a class="py-1.5 block" href="https://github.com/scottyzen/woonuxt?tab=readme-ov-file#next-generation-front-end-for-woocommerce" target="_blank">About</a>
-          <a href="/" class="py-1.5 block">Careers</a>
-          <a href="/" class="py-1.5 block">Press</a>
-          <a href="https://woonuxt.com/faq" class="py-1.5 block" rel="noreferrer" target="_blank">FAQ's</a>
+
+      <!-- Informations Utiles -->
+      <div class="w-full md:w-1/4 lg:w-auto mb-6 md:mb-0">
+        <div class="mb-4 font-semibold">Informations</div>
+        <div class="text-sm space-y-2">
+          <a class="block hover:underline" href="https:levelstore.co" target="_blank">À propos</a>
+          <a class="block hover:underline" href="https:levelstore.com" rel="noreferrer" target="_blank">FAQ</a>
         </div>
       </div>
-      <div class="w-3/7 lg:w-auto">
-        <div class="mb-1 font-semibold">Products</div>
-        <div class="text-sm">
-          <NuxtLink to="/products" class="py-1.5 block">{{ $t('messages.shop.newArrivals') }}</NuxtLink>
-          <NuxtLink to="/products?filter=sale[true]" class="py-1.5 block">On sale</NuxtLink>
-          <NuxtLink to="/products?orderby=rating&order=ASC&filter=rating[1]" class="py-1.5 block">Top rated</NuxtLink>
-          <a href="/" class="py-1.5 block">{{ $t('messages.shop.giftCards') }}</a>
+
+      <!-- Produits -->
+      <div class="w-full md:w-1/4 lg:w-auto mb-6 md:mb-0">
+        <div class="mb-4 font-semibold">Produits</div>
+        <div class="text-sm space-y-2">
+          <NuxtLink to="/products" class="block hover:underline">Nouveautés</NuxtLink>
+          <NuxtLink to="/products?filter=sale[true]" class="block hover:underline">En solde</NuxtLink>
+          <NuxtLink to="/products?orderby=rating&order=ASC&filter=rating[1]" class="block hover:underline">Meilleures notes</NuxtLink>
         </div>
       </div>
-      <div class="w-3/7 lg:w-auto">
-        <div class="mb-1 font-semibold">{{ $t('messages.general.customerService') }}</div>
-        <div class="text-sm">
-          <NuxtLink to="/contact" class="py-1.5 block">Contact Us</NuxtLink>
-          <a href="/" class="py-1.5 block">Shipping & Returns</a>
-          <a href="/" class="py-1.5 block">Privacy Policy</a>
-          <a href="/" class="py-1.5 block">Terms & Conditions</a>
-        </div>
-      </div>
-      <div class="w-3/7 lg:w-auto">
-        <div class="mb-1 font-semibold">{{ $t('messages.account.myAccount') }}</div>
-        <div class="text-sm">
-          <NuxtLink to="/my-account/" class="py-1.5 block">{{ $t('messages.account.myAccount') }}</NuxtLink>
-          <NuxtLink to="/my-account/?tab=orders" class="py-1.5 block">{{ $t('messages.shop.orderHistory') }}</NuxtLink>
-          <NuxtLink :to="wishlistLink" class="py-1.5 block">{{ $t('messages.shop.wishlist') }}</NuxtLink>
-          <a href="/" class="py-1.5 block">{{ $t('messages.general.newsletter') }}</a>
+
+      <!-- Service Client -->
+      <div class="w-full md:w-1/4 lg:w-auto">
+        <div class="mb-4 font-semibold">Service Client</div>
+        <div class="text-sm space-y-2">
+          <NuxtLink to="/contact" class="block hover:underline">Nous contacter</NuxtLink>
+          <a class="block hover:underline" href="/">Livraison et retours</a>
+          <a class="block hover:underline" href="/">Politique de confidentialité</a>
         </div>
       </div>
     </div>
-    <div class="container border-t flex items-center justify-center mb-4">
-      <div class="copywrite">
-        <p class="py-4 text-xs text-center">
-          <a href="https://woonuxt.com" :title="`WooNuxt v${wooNuxtVersionInfo}`">{{ `WooNuxt v${wooNuxtVersionInfo}` }}</a> - by
-          <a href="https://scottyzen.com" title="Scott Kennedy - Web Developer" target="_blank">Scott Kennedy</a>
-        </p>
+
+    <!-- Droits d'Auteur et Réseaux Sociaux -->
+    <div class="container border-t flex items-center justify-between py-4">
+      <div class="copywrite text-xs text-center">
+        <p>&copy; 2025 LEVEL. Tous droits réservés.</p>
+        <!-- <p>
+          <a href="https://levelstore.com" title="LEVEL">@ 2025 LEVEL tous droits réservés</a> - par
+          <a href="https://scottyzen.com" title="Adama Niasse - Développeur Web" target="_blank">Lamyakoun</a>
+        </p> -->
       </div>
-      <SocialIcons class="ml-auto" />
+      <div class="flex space-x-4">
+        <a href="#" title="Facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook" class="w-6 h-6 hover:opacity-75" />
+        </a>
+        <a href="#" title="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Instagram.svg" alt="Instagram" class="w-6 h-6 hover:opacity-75" />
+        </a>
+        <a href="#" title="Tik Tok">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" alt="Twitter" class="w-6 h-6 hover:opacity-75" />
+        </a>
+      </div>
     </div>
   </footer>
 </template>
 
 <style scoped lang="postcss">
+.text-bordeaux {
+  color: #7B241C;
+}
+
 a {
   @apply hover:underline;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.hover\:opacity-75:hover {
+  opacity: 0.75;
 }
 </style>

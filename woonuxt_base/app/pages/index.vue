@@ -9,7 +9,7 @@ const { data: productData } = await useAsyncGql('getProducts', { first: 5, order
 const popularProducts = productData.value.products?.nodes || [];
 
 useSeoMeta({
-  title: `Home`,
+  title: `Accueil`,
   ogTitle: siteName,
   description: description,
   ogDescription: shortDescription,
@@ -22,70 +22,109 @@ useSeoMeta({
   <main>
     <HeroBanner />
 
-    <div class="container flex flex-wrap items-center justify-center my-16 text-center gap-x-8 gap-y-4 brand lg:justify-between">
-      <img src="/images/logoipsum-211.svg" alt="Brand 1" width="132" height="35" />
-      <img src="/images/logoipsum-221.svg" alt="Brand 2" width="119" height="30" />
-      <img src="/images/logoipsum-225.svg" alt="Brand 3" width="49" height="48" />
-      <img src="/images/logoipsum-280.svg" alt="Brand 4" width="78" height="30" />
-      <img src="/images/logoipsum-284.svg" alt="Brand 5" width="70" height="44" />
-      <img src="/images/logoipsum-215.svg" alt="Brand 6" width="132" height="40" />
-    </div>
-
     <section class="container my-16">
       <div class="flex items-end justify-between">
-        <h2 class="text-lg font-semibold md:text-2xl">{{ $t('messages.shop.shopByCategory') }}</h2>
-        <NuxtLink class="text-primary" to="/categories">{{ $t('messages.general.viewAll') }}</NuxtLink>
+        <h2 class="text-2xl font-bold md:text-3xl animate-fade-in-up">{{ $t('messages.shop.shopByCategory') }}</h2>
+        <NuxtLink class="text-gold hover:underline" to="/categories">{{ $t('messages.general.viewAll') }}</NuxtLink>
       </div>
-      <div class="grid justify-center grid-cols-2 gap-4 mt-8 md:grid-cols-3 lg:grid-cols-6">
-        <CategoryCard v-for="(category, i) in productCategories" :key="i" class="w-full" :node="category" />
+      <div class="grid justify-center grid-cols-2 gap-6 mt-8 md:grid-cols-3 lg:grid-cols-6">
+        <CategoryCard v-for="(category, i) in productCategories" :key="i" class="w-full animate-fade-in-up" :node="category" />
       </div>
     </section>
 
-    <section class="container grid gap-4 my-24 md:grid-cols-2 lg:grid-cols-4">
-      <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
+    <section class="container grid gap-6 my-24 md:grid-cols-2 lg:grid-cols-4">
+      <div class="flex items-center gap-8 p-8 bg-white rounded-lg shadow-md animate-fade-in-up">
         <img src="/icons/box.svg" width="60" height="60" alt="Free Shipping" loading="lazy" />
         <div>
-          <h3 class="text-xl font-semibold">Free Shipping</h3>
-          <p class="text-sm">Free shipping on order over €50</p>
+          <h3 class="text-xl font-semibold">Livraison Gratuite</h3>
+          <p class="text-sm">Livraison gratuite pour les commandes supérieures à 50 milles</p>
         </div>
       </div>
-      <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
+      <div class="flex items-center gap-8 p-8 bg-white rounded-lg shadow-md animate-fade-in-up delay-200">
         <img src="/icons/moneyback.svg" width="60" height="60" alt="Money Back" loading="lazy" />
         <div>
-          <h3 class="text-xl font-semibold">Peace of Mind</h3>
-          <p class="text-sm">30 days money back guarantee</p>
+          <h3 class="text-xl font-semibold">Tranquillité d'Esprit</h3>
+          <p class="text-sm">Garantie de remboursement sous 30 jours</p>
         </div>
       </div>
-      <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
+      <div class="flex items-center gap-8 p-8 bg-white rounded-lg shadow-md animate-fade-in-up delay-400">
         <img src="/icons/secure.svg" width="60" height="60" alt="Secure Payment" loading="lazy" />
         <div>
-          <h3 class="text-xl font-semibold">100% Payment Secure</h3>
-          <p class="text-sm">Your payment are safe with us.</p>
+          <h3 class="text-xl font-semibold">Paiement 100% Sécurisé</h3>
+          <p class="text-sm">Vos paiements sont sécurisés avec nous.</p>
         </div>
       </div>
-      <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
+      <div class="flex items-center gap-8 p-8 bg-white rounded-lg shadow-md animate-fade-in-up delay-600">
         <img src="/icons/support.svg" width="60" height="60" alt="Support 24/7" loading="lazy" />
         <div>
           <h3 class="text-xl font-semibold">Support 24/7</h3>
-          <p class="text-sm">24/7 Online support</p>
+          <p class="text-sm">Support en ligne 24/7</p>
         </div>
       </div>
     </section>
 
     <section class="container my-16" v-if="popularProducts">
       <div class="flex items-end justify-between">
-        <h2 class="text-lg font-semibold md:text-2xl">{{ $t('messages.shop.popularProducts') }}</h2>
-        <NuxtLink class="text-primary" to="/products">{{ $t('messages.general.viewAll') }}</NuxtLink>
+        <h2 class="text-2xl font-bold md:text-3xl animate-fade-in-up">{{ $t('messages.shop.popularProducts') }}</h2>
+        <NuxtLink class="text-gold hover:underline" to="/products">{{ $t('messages.general.viewAll') }}</NuxtLink>
       </div>
       <ProductRow :products="popularProducts" class="grid-cols-2 md:grid-cols-4 lg:grid-cols-5 mt-8" />
+    </section>
+
+    <section class="container my-16">
+      <h2 class="text-2xl font-bold md:text-3xl text-center animate-fade-in-up">Ce que disent nos clients</h2>
+      <div class="grid justify-center grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="p-6 bg-white rounded-lg shadow-md animate-fade-in-up">
+          <p class="italic text-gray-600">"J'adore les vêtements de LEVEL ! La qualité est excellente et les modèles sont très élégants."</p>
+          <p class="mt-4 font-semibold text-gold">- Aïssatou D.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-md animate-fade-in-up delay-200">
+          <p class="italic text-gray-600">"Le service client est incroyable. Ils ont répondu à toutes mes questions rapidement et avec gentillesse."</p>
+          <p class="mt-4 font-semibold text-gold">- Fatou B.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-md animate-fade-in-up delay-400">
+          <p class="italic text-gray-600">"La livraison a été très rapide et les vêtements sont encore plus beaux en vrai !"</p>
+          <p class="mt-4 font-semibold text-gold">- Mariama S.</p>
+        </div>
+      </div>
     </section>
   </main>
 </template>
 
 <style scoped>
-.brand img {
-  max-height: min(8vw, 120px);
-  object-fit: contain;
-  object-position: center;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.text-gold {
+  color: #CD7F32;
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
 }
 </style>
+

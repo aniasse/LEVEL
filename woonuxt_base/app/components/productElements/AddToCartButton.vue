@@ -21,7 +21,7 @@ watch(cart, (val) => {
     :disabled="disabled"
     @click="isLoading = true">
     <span>{{ addToCartButtonText }}</span>
-    <LoadingIcon v-if="isLoading" stroke="4" size="12" color="#fff" />
+    <LoadingIcon v-if="isLoading" stroke="4" size="12" color="#CD7F32" />
   </button>
 </template>
 

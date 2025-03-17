@@ -83,8 +83,8 @@ async function addComment() {
         </div>
       </div>
     </div>
-    <div class="mt-10 text-xl mb-2 text-gray-900">Share your thoughts</div>
-    <div class="text-sm mb-4">If you have used this product, we would love to hear about your experience.</div>
+    <div class="mt-10 text-xl mb-2 text-gray-900">Partagez vos pensées</div>
+    <div class="text-sm mb-4">Si vous avez utilisé ce produit, nous aimerions connaître votre expérience.</div>
     <button @click="show = !show" class="border rounded-lg text-center w-full p-2">
       {{ show ? $t('messages.shop.close') : $t('messages.shop.writeReview') }}
     </button>

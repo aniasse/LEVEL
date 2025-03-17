@@ -39,12 +39,12 @@ const goToOrder = (orderNumber: string): void => {
       </table>
       <div class="text-center flex justify-center w-full mt-8">
         <button type="button" @click="refresh" class="flex items-center gap-1 text-sm leading-none hover:bg-gray-50 p-2 rounded">
-          <span>Reresh list</span>
+          <span>Actualiser la liste</span>
           <Icon name="ion:refresh-outline" />
         </button>
       </div>
     </div>
-    <div v-else-if="orders && orders.length === 0" class="min-h-[250px] flex items-center justify-center text-gray-500 text-lg">No orders found.</div>
+    <div v-else-if="orders && orders.length === 0" class="min-h-[250px] flex items-center justify-center text-gray-500 text-lg">Aucune commande trouvée.</div>
     <LoadingIcon v-else size="24" stroke="2" />
   </div>
 </template>
