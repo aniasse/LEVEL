@@ -3,8 +3,8 @@ import Slider from '@vueform/slider';
 
 const { getFilter, setFilter, isFiltersActive } = useFiltering();
 const runtimeConfig = useRuntimeConfig();
-const maxPrice = runtimeConfig?.public?.MAX_PRICE || 1000;
-const currencySymbol = runtimeConfig?.public?.CURRENCY_SYMBOL || '$';
+const maxPrice = runtimeConfig?.public?.MAX_PRICE || 50000;
+const currencySymbol = runtimeConfig?.public?.CURRENCY_SYMBOL || '';
 
 const activeFilters = ref(getFilter('price'));
 const price = activeFilters.value.length ? ref(activeFilters.value) : ref([0, maxPrice]);

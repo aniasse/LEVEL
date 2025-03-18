@@ -4,7 +4,7 @@
       width="1400"
       height="800"
       class="object-cover w-full h-[420px] lg:h-[560px] xl:h-[640px] transition-transform duration-500 ease-in-out hover:scale-105 rounded-2xl border-gold border-4"
-      src="/images/hero-6.png"
+      src="/images/hero-7.png"
       alt="Hero image"
       loading="eager"
       sizes="sm:100vw md:1400px"

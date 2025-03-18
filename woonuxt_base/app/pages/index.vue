@@ -9,7 +9,7 @@ const { data: productData } = await useAsyncGql('getProducts', { first: 5, order
 const popularProducts = productData.value.products?.nodes || [];
 
 useSeoMeta({
-  title: `Accueil`,
+  title: `LEVEL`,
   ogTitle: siteName,
   description: description,
   ogDescription: shortDescription,

@@ -10,9 +10,19 @@ const faviconUrl = '/logo4.png';
 <template>
   <NuxtLink to="/" class="inline-flex items-center gap-2">
     <img v-if="logoUrl" :src="logoUrl" alt="Logo" class="object-contain h-10" />
-    <div v-else class="flex items-center gap-4 text-lg font-bold">
-      <img :src="faviconUrl" alt="Logo" width="42" height="42" />
-      <!-- <span>{{ siteName }}</span> -->
+    <div v-else class="flex items-center gap-4 text-lg font-bold logo-text font-montserrat">
+      {{ siteName }}
     </div>
   </NuxtLink>
 </template>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+.logo-text {
+  font-family: 'Montserrat', sans-serif; /* Exemple de police Google Fonts */
+  color: #7B241C; /* Rouge bordeaux */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Effet d'ombre */
+  letter-spacing: 1px; /* Espacement des lettres */
+}
+
+</style>

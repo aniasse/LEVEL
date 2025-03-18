@@ -3,7 +3,7 @@ const { wishlistLink } = useAuth();
 </script>
 
 <template>
-  <footer class="bg-white text-bordeaux order-last">
+  <footer class="bg-white order-last">
     <div class="container flex flex-wrap justify-between gap-12 my-12 md:gap-24">
       <!-- Logo et Description -->
       <div class="mr-auto mb-6 md:mb-0">
@@ -14,7 +14,7 @@ const { wishlistLink } = useAuth();
 
       <!-- Informations Utiles -->
       <div class="w-full md:w-1/4 lg:w-auto mb-6 md:mb-0">
-        <div class="mb-4 font-semibold">Informations</div>
+        <div class="mb-4 font-semibold text-bordeaux">Informations</div>
         <div class="text-sm space-y-2">
           <a class="block hover:underline" href="https:levelstore.co" target="_blank">À propos</a>
           <a class="block hover:underline" href="https:levelstore.com" rel="noreferrer" target="_blank">FAQ</a>
@@ -23,7 +23,7 @@ const { wishlistLink } = useAuth();
 
       <!-- Produits -->
       <div class="w-full md:w-1/4 lg:w-auto mb-6 md:mb-0">
-        <div class="mb-4 font-semibold">Produits</div>
+        <div class="mb-4 font-semibold text-bordeaux">Produits</div>
         <div class="text-sm space-y-2">
           <NuxtLink to="/products" class="block hover:underline">Nouveautés</NuxtLink>
           <NuxtLink to="/products?filter=sale[true]" class="block hover:underline">En solde</NuxtLink>
@@ -33,7 +33,7 @@ const { wishlistLink } = useAuth();
 
       <!-- Service Client -->
       <div class="w-full md:w-1/4 lg:w-auto">
-        <div class="mb-4 font-semibold">Service Client</div>
+        <div class="mb-4 font-semibold text-bordeaux">Service Client</div>
         <div class="text-sm space-y-2">
           <NuxtLink to="/contact" class="block hover:underline">Nous contacter</NuxtLink>
           <a class="block hover:underline" href="/">Livraison et retours</a>
@@ -60,6 +60,9 @@ const { wishlistLink } = useAuth();
         </a>
         <a href="#" title="Tik Tok">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" alt="Twitter" class="w-6 h-6 hover:opacity-75" />
+        </a>
+        <a href="#" title="Snap">
+          <img src="https://www.svgrepo.com/show/303130/snapchat-logo.svg" alt="Snap" class="w-6 h-6 hover:opacity-75" />
         </a>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 
+
 export default <Partial<Config>>{
   content: ['./components/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}', './app.vue'],
   theme: {
@@ -10,9 +11,9 @@ export default <Partial<Config>>{
     extend: {
       colors: {
         primary: {
-          light: '#AE7DDD',
-          DEFAULT: process.env.PRIMARY_COLOR || '#7F54B2',
-          dark: '#754fa3',
+          light: '#7B241C',
+          DEFAULT: process.env.PRIMARY_COLOR || '#7B241C',
+          dark: '#7B241C',
         },
       },
       aspectRatio: {
@@ -23,5 +24,12 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    function({ addBase }: { addBase: Function }) {
+      addBase({
+        '@import': "url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap')",
+      });
+    },
+  ],
 };
