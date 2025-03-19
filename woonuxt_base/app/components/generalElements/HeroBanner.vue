@@ -1,5 +1,13 @@
 <template>
+  <PageSection
+    class="!pt-0"
+    column
+  >
   <div class="relative mx-auto overflow-hidden">
+    <div class="relative rounded-xl">
+    <div class="w-full h-[6rem] mx-auto bordure absolute top-[-4rem] blur-[250px] opacity-20 z-[1]"></div>
+        <BorderBeam :size="400" :duration="10" :delay="9" :border-width="4" />
+
     <NuxtImg
       width="1400"
       height="800"
@@ -13,7 +21,9 @@
       placeholder
       placeholder-class="blur-xl" />
     <div class="absolute inset-0 flex flex-col items-start justify-end p-6 pb-16 bg-gradient-to-l from-gray-700">
-      <h1 class="text-3xl font-extrabold md:mb-4 md:text-4xl lg:text-5xl text-gold animate-fade-in-up">Nouvelle Collection</h1>
+      <h1 class="text-3xl font-extrabold md:mb-4 md:text-4xl lg:text-5xl text-transparent animate-shimmer bg-clip-text via-white/80 via-50% to-transparent bg-no-repeat [background-position:0_0] [background-size:200px_100%] [transition:background-position_2s_cubic-bezier(.6,.6,0,1)_infinite] bg-gradient-to-r from-transparent">
+  Nouvelle Collection
+</h1>
       <h2 class="text-lg font-semibold md:mb-4 lg:text-2xl text-white animate-fade-in-up delay-200">Découvrez nos dernières tendances</h2>
       <div class="max-w-sm mb-8 text-sm font-light lg:max-w-md text-balance text-white animate-fade-in-up delay-400">
         <p>Notre nouvelle collection est arrivée. Explorez les dernières tendances et styles pour cette saison.</p>
@@ -21,13 +31,25 @@
       <NuxtLink
         class="px-6 py-3 font-bold text-white bg-gold rounded-full hover:bg-gold-dark transition-colors duration-300 animate-bounce border-gold border-2"
         to="/products">
-        Boutique
+        Boutique<Icon
+              name="i-heroicons-arrow-right"
+              class="w-4 h-4 ml-1"
+            />
       </NuxtLink>
+      <!-- <SectionBadge
+            text="Votre boutique en ligne, clé en main"
+            icon="i-material-symbols-key"
+            href="https://nuxt.com/"
+            shiny
+          /> -->
+    </div>
     </div>
   </div>
+</PageSection>
 </template>
 
 <style>
+
   .text-gold {
     color: #CD7F32;
   }

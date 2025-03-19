@@ -13,7 +13,9 @@
   "dependencies": {
     "@stripe/stripe-js": "^4.10.0",
     "@vueform/slider": "^2.1.10",
-    "@vueuse/core": "^12.8.2"
+    "@vueuse/core": "^12.8.2",
+    "@vueuse/motion": "^3.0.3",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@iconify-json/ion": "^1.2.2",

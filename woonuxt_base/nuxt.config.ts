@@ -2,6 +2,7 @@ import { createResolver } from '@nuxt/kit';
 const { resolve } = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
+  css: [resolve('./app/assets/css/base.css')],
   compatibilityDate: '2024-12-26',
   future: {
     compatibilityVersion: 4,
@@ -76,8 +77,8 @@ export default defineNuxtConfig({
       { code: 'fr_FR', file: 'fr-FR.json', name: 'Français' },
       { code: 'en_US', file: 'en-US.json', name: 'English' },
       // { code: 'de_DE', file: 'de-DE.json', name: 'Deutsch' },
-      { code: 'es_ES', file: 'es-ES.json', name: 'Español' },
-      // { code: 'it_IT', file: 'it-IT.json', name: 'Italiano' },
+      // { code: 'es_ES', file: 'es-ES.json', name: 'Español' },
+      // // { code: 'it_IT', file: 'it-IT.json', name: 'Italiano' },
       // { code: 'pt_BR', file: 'pt-BR.json', name: 'Português' },
     ],
     langDir: 'locales',
