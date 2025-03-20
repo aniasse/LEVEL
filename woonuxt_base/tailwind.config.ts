@@ -16,7 +16,25 @@ export default <Partial<Config>>{
           DEFAULT: process.env.PRIMARY_COLOR || '#7B241C',
           dark: '#7B241C',
         },
+        secondary: {
+          DEFAULT: '#4A4A4A', // Gris foncé par défaut
+          light: '#808080',   // Gris clair
+        },
+         // Vous pouvez ajouter d'autres nuances de doré si nécessaire
+         gold: {
+          100: '#FFF1C1',
+          200: '#FFE58F',
+          300: '#FFD95D',
+          400: '#FFCD2B',
+          500: '#C5A028', // Votre couleur dorée principale
+          600: '#CD7F32',
+          700: '#7B241C',
+        },
+        // purple:{
+        //   500: '#CD7F32'
+        // }
       },
+      
       keyframes: {
         "border-beam": {
           "100%": {
@@ -44,7 +62,7 @@ export default <Partial<Config>>{
           to: { transform: "translateY(calc(-100% - 1rem))" }
         },
         "color-cycle": {
-          "0%, 100%": { backgroundColor: "rgb(168, 85, 247)" }, // bg-purple-500
+          "0%, 100%": { backgroundColor: "rgb(249, 115, 22)" }, // bg-purple-500
           "25%": { backgroundColor: "rgb(96, 165, 250)" }, // bg-blue-400
           "50%": { backgroundColor: "rgb(34, 197, 94)" }, // bg-green-500
           "75%": { backgroundColor: "rgb(249, 115, 22)" } // bg-orange-500

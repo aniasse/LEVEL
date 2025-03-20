@@ -23,7 +23,7 @@ useSeoMeta({
           <section class="my-8 flex gap-4 items-start justify-center w-full">
             <img v-if="avatar" :src="avatar" class="rounded-full aspect-square border border-white" alt="user-image" width="48" height="48" />
             <div class="flex-1 text-balance leading-tight w-full text-ellipsis overflow-hidden">
-              <div class="text-lg font-semibold">Welcome, {{ viewer?.firstName }}</div>
+              <div class="text-lg font-semibold">Bienvenue, {{ viewer?.firstName }}</div>
               <span v-if="viewer?.email" class="text-gray-400 font-light" :title="viewer?.email">{{ viewer?.email }}</span>
             </div>
             <button class="flex text-gray-700 items-center flex-col p-2 px-4 rounded-lg hover:bg-white hover:text-red-700 lg:hidden" @click="logoutUser">
@@ -48,7 +48,7 @@ useSeoMeta({
             </NuxtLink>
             <NuxtLink to="/my-account?tab=wishlist" class="flex items-center gap-4 p-2 px-4" :class="{ active: activeTab == 'wishlist' }">
               <Icon name="ion:heart-outline" size="22" />
-              Wishlist
+              Favoris
             </NuxtLink>
           </nav>
           <template class="hidden lg:block">

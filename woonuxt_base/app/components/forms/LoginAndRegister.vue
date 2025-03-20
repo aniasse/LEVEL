@@ -1,9 +1,8 @@
 <template>
   <div class="max-w-lg mx-auto my-16 min-h-[600px] text-center">
-    <Logo />
     <div class="flex flex-col my-2">
       <h1 class="text-xl font-semibold lg:text-3xl">{{ formTitle }}</h1>
-      <p class="text-gray-500 mt-2">Welcome back! Select method to login.</p>
+      <p class="text-gray-500 mt-2">Bienvenue ! Sélectionnez la méthode de connexion.</p>
     </div>
 
     <LoginProviders class="my-8" v-if="formView === 'login' || formView === 'register'" />
@@ -12,7 +11,7 @@
       <div v-if="formView === 'register' || formView === 'forgotPassword'" for="email">
         <input id="email" v-model="userInfo.email" :placeholder="inputPlaceholder.email" autocomplete="email" type="text" required />
       </div>
-      <p v-if="formView === 'forgotPassword'" class="text-sm text-gray-500">{{ $t('messages.account.enterEmailOrUsernameForReset') }}</p>
+      <p v-if="formView === 'forgotPassword'" class="text-sm text-gray-500">ou continuez avec l'email.</p>
       <div v-if="formView !== 'forgotPassword'">
         <input class="mt-1" v-model="userInfo.username" :placeholder="inputPlaceholder.username" autocomplete="username" type="text" required />
 
@@ -31,9 +30,9 @@
       </Transition>
 
       <div class="flex items-center justify-between mt-4">
-        <label class="flex items-center gap-2"><input v-model="userInfo.rememberMe" type="checkbox" />Remember me </label>
-        <div class="font-semibold cursor-pointer text-sm text-primary hover:text-primary" @click="navigate('forgotPassword')" v-if="formView === 'login'">
-          Forgot password?
+        <!-- <label class="flex items-center gap-2"><input v-model="userInfo.rememberMe" type="checkbox" />Remember me </label> -->
+        <div class="font-semibold cursor-pointer text-sm  hover:text-primary" @click="navigate('forgotPassword')" v-if="formView === 'login'">
+          Mot de passe oublié ?
         </div>
       </div>
 
@@ -66,7 +65,7 @@ const route = useRoute();
 const router = useRouter();
 const { loginUser, isPending, registerUser, sendResetPasswordEmail, loginClients } = useAuth();
 
-const userInfo = ref({ email: '', password: '', username: '', rememberMe: false });
+const userInfo = ref({ email: '', password: '', username: ''});
 const formView = ref('login');
 const message = ref('');
 const errorMessage = ref('');
@@ -168,8 +167,8 @@ const passwordLabel = computed(() => t('messages.account.password'));
 
 const inputPlaceholder = computed(() => {
   return {
-    email: 'johndoe@email.com',
-    username: formView.value === 'login' ? 'johndoe@email.com' : 'johndoe',
+    email: 'fatima@email.com',
+    username: formView.value === 'login' ? 'fatima@email.com' : 'fatima',
     password: '********',
   };
 });
@@ -183,6 +182,6 @@ button {
 }
 
 form button {
-  @apply rounded-lg font-bold bg-gray-800 text-white py-3 px-8 hover:bg-gray-800;
+  @apply rounded-lg font-bold bg-gold-600 text-white py-3 px-8 hover:bg-gold-700;
 }
 </style>

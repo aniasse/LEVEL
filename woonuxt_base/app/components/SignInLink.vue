@@ -19,7 +19,7 @@ const linkTitle = computed<string>(() => viewer.value?.username || 'Sign In');
           <button class="text-red-600 hover:bg-red-50" @click.prevent="logoutUser">
             <LoadingIcon v-if="isPending" size="16" />
             <Icon v-else name="ion:log-out-outline" size="16" />
-            <span>Deconnexion</span>
+            <span>Déconnexion</span>
           </button>
         </div>
       </span>

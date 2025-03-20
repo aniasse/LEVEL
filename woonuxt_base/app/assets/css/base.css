@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 .magic-text {
-  @apply animate-background-pan bg-gradient-to-r from-[#7B241C] via-[#CD7F32] to-[#7B241C] bg-[length:200%] text-transparent bg-clip-text whitespace-nowrap;
+  @apply text-2xl animate-background-pan bg-gradient-to-r from-[#CD7F32] via-[#CD7F32] to-[#dfb484] bg-[length:200%] text-transparent bg-clip-text whitespace-nowrap;
 }
+/* .text-primary{
+  @apply bg-gold-600
+} */

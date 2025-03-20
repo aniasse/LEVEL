@@ -1,11 +1,11 @@
 <template>
-  <PageSection
+  <section
     class="!pt-0"
     column
   >
   <div class="relative mx-auto overflow-hidden">
     <div class="relative rounded-xl">
-    <div class="w-full h-[6rem] mx-auto bordure absolute top-[-4rem] blur-[250px] opacity-20 z-[1]"></div>
+    <!-- <div class="w-full h-[6rem] mx-auto bordure absolute top-[-4rem] blur-[250px] opacity-20 z-[1]"></div> -->
         <BorderBeam :size="400" :duration="10" :delay="9" :border-width="4" />
 
     <NuxtImg
@@ -29,23 +29,19 @@
         <p>Notre nouvelle collection est arrivée. Explorez les dernières tendances et styles pour cette saison.</p>
       </div>
       <NuxtLink
-        class="px-6 py-3 font-bold text-white bg-gold rounded-full hover:bg-gold-dark transition-colors duration-300 animate-bounce border-gold border-2"
+        class="z-20 px-6 py-3 font-bold text-white bg-gold rounded-full  transition-colors  animate-bounce border-gold border-2"
         to="/products">
         Boutique<Icon
               name="i-heroicons-arrow-right"
               class="w-4 h-4 ml-1"
             />
       </NuxtLink>
-      <!-- <SectionBadge
-            text="Votre boutique en ligne, clé en main"
-            icon="i-material-symbols-key"
-            href="https://nuxt.com/"
-            shiny
-          /> -->
+
     </div>
     </div>
+
   </div>
-</PageSection>
+</section>
 </template>
 
 <style>

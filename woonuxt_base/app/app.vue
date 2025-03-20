@@ -251,12 +251,12 @@ input[type='radio']:after {
 input[type='checkbox']:checked:after,
 input[type='checkbox'] + label,
 input[type='radio'] + label {
-  @apply cursor-pointer text-gray-600 hover:text-primary;
+  @apply cursor-pointer text-gray-600 hover:bg-gold-600;
 }
 
 input[type='checkbox']:checked + label,
 input[type='radio']:checked + label {
-  @apply text-gray-800 hover:text-primary-dark;
+  @apply text-gray-800 hover:bg-gold-700;
 }
 
 input[type='checkbox']:checked,

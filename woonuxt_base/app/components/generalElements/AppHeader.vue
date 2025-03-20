@@ -5,9 +5,12 @@ const { isShowingSearch } = useSearching();
 <template>
   <header class="sticky top-0 z-40 bg-white shadow-sm shadow-light-500">
     <div class="container flex items-center justify-between py-4">
-      <div class="flex items-center">
+      <div class="items-center">
         <MenuTrigger class="lg:hidden" />
-        <Logo class="md:w-[160px]" />
+      </div>
+        <!-- Centered Logo for Mobile, Default for Desktop -->
+        <div class="flex justify-center flex-grow lg:flex-none">
+        <Logo class="w-[100px] md:w-[160px]" />
       </div>
       <MainMenu class="items-center hidden gap-6 text-sm text-gray-500 lg:flex lg:px-4" />
       <div class="flex justify-end items-center md:w-[160px] flex-1 ml-auto gap-4 md:gap-6">
@@ -26,3 +29,4 @@ const { isShowingSearch } = useSearching();
     </Transition>
   </header>
 </template>
+
