@@ -5,12 +5,12 @@ const { isShowingSearch } = useSearching();
 <template>
   <header class="sticky top-0 z-40 bg-white shadow-sm shadow-light-500">
     <div class="container flex items-center justify-between py-4">
-      <div class="items-center">
+      <div class="flex items-center gap-4 w-full sm:w-auto">
         <MenuTrigger class="lg:hidden" />
-      </div>
-        <!-- Centered Logo for Mobile, Default for Desktop -->
-        <div class="flex justify-center flex-grow lg:flex-none">
-        <Logo class="w-[100px] md:w-[160px]" />
+        <!-- Logo centré uniquement sur mobile -->
+        <div class="flex-grow flex justify-center sm:flex-grow-0 sm:justify-start">
+          <Logo class="w-[100px] md:w-[160px]" />
+        </div>
       </div>
       <MainMenu class="items-center hidden gap-6 text-sm text-gray-500 lg:flex lg:px-4" />
       <div class="flex justify-end items-center md:w-[160px] flex-1 ml-auto gap-4 md:gap-6">

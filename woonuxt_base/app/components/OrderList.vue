@@ -45,7 +45,7 @@ const goToOrder = (orderNumber: string): void => {
       </div>
     </div>
     <div v-else-if="orders && orders.length === 0" class="min-h-[250px] flex items-center justify-center text-gray-500 text-lg">Aucune commande trouvée.</div>
-    <LoadingIcon v-else size="24" stroke="2" />
+    <LoadingIcon v-else size="24" stroke="2" :color="'#CD7F32'" />
   </div>
 </template>
 

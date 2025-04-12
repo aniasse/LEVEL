@@ -17,13 +17,13 @@ const linkTitle = computed<string>(() => viewer.value?.username || 'Sign In');
           <NuxtLink :to="wishlistLink" class="hover:bg-gray-100"><Icon name="ion:heart-outline" size="16" /><span>Favoris</span></NuxtLink>
           <NuxtLink to="/my-account" class="hover:bg-gray-100"><Icon name="ion:person-outline" size="16" /><span>Mon Compte</span></NuxtLink>
           <button class="text-red-600 hover:bg-red-50" @click.prevent="logoutUser">
-            <LoadingIcon v-if="isPending" size="16" />
+            <LoadingIcon v-if="isPending" size="16" color="#CD7F32" />
             <Icon v-else name="ion:log-out-outline" size="16" />
             <span>Déconnexion</span>
           </button>
         </div>
       </span>
-      <Icon v-else name="ion:person-outline" size="22" class="border border-transparent" />
+      <Icon v-else name="heroicons:user" size="26" class="border border-transparent" />
     </Transition>
   </NuxtLink>
 </template>

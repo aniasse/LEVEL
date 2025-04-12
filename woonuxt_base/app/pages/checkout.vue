@@ -86,12 +86,12 @@ useSeoMeta({
           <!-- Customer details -->
           <div v-if="!viewer && customer.billing">
             <h2 class="w-full mb-2 text-2xl font-semibold leading-none">Coordonnées</h2>
-            <p class="mt-1 text-sm text-gray-500">Vous avez déjà un compte ? <a href="/my-account" class="text-primary text-semibold">Se connecter</a>.</p>
+            <p class="mt-1 text-sm text-gray-500">Vous avez déjà un compte ? <a href="/my-account" class="text-gold-600 text-semibold">Se connecter</a>.</p>
             <div class="w-full mt-4">
               <label for="email">{{ $t('messages.billing.email') }}</label>
               <input
                 v-model="customer.billing.email"
-                placeholder="johndoe@email.com"
+                placeholder="fatou@email.com"
                 autocomplete="email"
                 type="email"
                 name="email"
@@ -106,7 +106,7 @@ useSeoMeta({
             <template v-if="orderInput.createAccount">
               <div class="w-full mt-4">
                 <label for="username">{{ $t('messages.account.username') }}</label>
-                <input v-model="orderInput.username" placeholder="johndoe" autocomplete="username" type="text" name="username" required />
+                <input v-model="orderInput.username" placeholder="fatou" autocomplete="username" type="text" name="username" required />
               </div>
               <div class="w-full my-2" v-if="orderInput.createAccount">
                 <label for="email">{{ $t('messages.account.password') }}</label>
@@ -114,7 +114,7 @@ useSeoMeta({
               </div>
             </template>
             <div v-if="!viewer" class="flex items-center gap-2 my-2">
-              <label for="creat-account">Create an account?</label>
+              <label for="creat-account">Créer un compte ?</label>
               <input id="creat-account" v-model="orderInput.createAccount" type="checkbox" name="creat-account" />
             </div>
           </div>
@@ -137,10 +137,10 @@ useSeoMeta({
           </Transition>
 
           <!-- Shipping methods -->
-          <div v-if="cart.availableShippingMethods.length">
+          <!-- <div v-if="cart.availableShippingMethods.length">
             <h3 class="mb-4 text-xl font-semibold">{{ $t('messages.general.shippingSelect') }}</h3>
             <ShippingOptions :options="cart.availableShippingMethods[0].rates" :active-option="cart.chosenShippingMethods[0]" />
-          </div>
+          </div> -->
 
           <!-- Pay methods -->
           <div v-if="paymentGateways?.nodes.length" class="mt-2 col-span-full">
@@ -164,7 +164,7 @@ useSeoMeta({
 
         <OrderSummary>
           <button
-            class="flex items-center justify-center w-full gap-3 p-3 mt-4 font-semibold text-center text-white rounded-lg shadow-md bg-primary hover:bg-primary-dark disabled:cursor-not-allowed disabled:bg-gray-400"
+            class="flex items-center justify-center w-full gap-3 p-3 mt-4 font-semibold text-center text-white rounded-lg shadow-md bg-gold-600 disabled:cursor-not-allowed disabled:bg-gray-400"
             :disabled="isCheckoutDisabled">
             {{ buttonText }}<LoadingIcon v-if="isProcessingOrder" color="#fff" size="18" />
           </button>

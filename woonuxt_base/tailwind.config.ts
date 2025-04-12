@@ -63,7 +63,7 @@ export default <Partial<Config>>{
         },
         "color-cycle": {
           "0%, 100%": { backgroundColor: "rgb(249, 115, 22)" }, // bg-purple-500
-          "25%": { backgroundColor: "rgb(96, 165, 250)" }, // bg-blue-400
+          "25%": { backgroundColor: "rgb(249, 115, 22)" }, // bg-blue-400
           "50%": { backgroundColor: "rgb(34, 197, 94)" }, // bg-green-500
           "75%": { backgroundColor: "rgb(249, 115, 22)" } // bg-orange-500
         },

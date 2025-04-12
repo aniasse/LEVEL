@@ -10,7 +10,7 @@ const faviconUrl = '/logo4.png';
 <template>
   <NuxtLink to="/" class="inline-flex items-center gap-2">
     <img v-if="logoUrl" :src="logoUrl" alt="Logo" class="object-contain h-10" />
-    <div v-else class="flex bg-center-black items-center gap-4 text-lg font-bold logo-text font-montserrat magic-text">
+    <div v-else class="flex items-center gap-4 text-lg font-bold logo-text font-montserrat magic-text">
       <span class="magic-text">{{ siteName }}</span>
     </div>
   </NuxtLink>

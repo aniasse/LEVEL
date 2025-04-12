@@ -16,7 +16,7 @@ watch(cart, (val) => {
 <template>
   <button
     type="submit"
-    class="rounded-lg flex font-bold bg-gray-800 text-white text-center min-w-[150px] p-2.5 gap-4 items-center justify-center focus:outline-none"
+    class="rounded-lg flex font-bold back text-white text-center min-w-[150px] p-2.5 gap-4 items-center justify-center focus:outline-none"
     :class="{ disabled: disabled }"
     :disabled="disabled"
     @click="isLoading = true">
@@ -26,6 +26,9 @@ watch(cart, (val) => {
 </template>
 
 <style lang="postcss" scoped>
+.back{
+  background-color:#CD7F32 ;
+}
 button {
   outline: none !important;
   transition: all 150ms ease-in;

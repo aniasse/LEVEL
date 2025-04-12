@@ -42,3 +42,9 @@ const { cart, isUpdatingCart } = useCart();
     </div>
   </aside>
 </template>
+
+<style lang="postcss" scoped>
+.back{
+  background-color:#CD7F32 ;
+}
+</style>

@@ -52,17 +52,17 @@ const { wishlistLink } = useAuth();
         </p> -->
       </div>
       <div class="flex space-x-4">
-        <a href="#" title="Facebook">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook" class="w-6 h-6 hover:opacity-75" />
+        <a href="#" title="Facebook" class="text-gold hover:text-gold-dark">
+          <Icon name="mdi:facebook" class="w-7 h-7" />
         </a>
-        <a href="#" title="Instagram">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Instagram.svg" alt="Instagram" class="w-6 h-6 hover:opacity-75" />
+        <a href="#" title="Instagram" class="text-gold hover:text-gold-dark">
+          <Icon name="mdi:instagram" class="w-7 h-7" />
         </a>
-        <a href="#" title="Tik Tok">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" alt="Twitter" class="w-6 h-6 hover:opacity-75" />
+        <a href="#" title="Tik Tok" class="text-gold hover:text-gold-dark">
+          <Icon name="ic:baseline-tiktok" class="w-7 h-7" />
         </a>
-        <a href="#" title="Snap">
-          <img src="https://www.svgrepo.com/show/303130/snapchat-logo.svg" alt="Snap" class="w-6 h-6 hover:opacity-75" />
+        <a href="#" title="Snap" class="text-gold hover:text-gold-dark">
+          <Icon name="ri:snapchat-fill" class="w-7 h-7" />
         </a>
       </div>
     </div>
@@ -72,6 +72,12 @@ const { wishlistLink } = useAuth();
 <style scoped lang="postcss">
 .text-bordeaux {
   color: #7B241C;
+}
+.text-gold {
+  color: #CD7F32;
+}
+.hover\:text-gold-dark:hover {
+  color: #b36d2a;
 }
 
 a {

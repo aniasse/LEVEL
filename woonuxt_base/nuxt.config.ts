@@ -3,7 +3,7 @@ const { resolve } = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
   devtools: {
-    enabled: false,
+    enabled: true,
   },
 
   css: [resolve('./app/assets/css/base.css')],

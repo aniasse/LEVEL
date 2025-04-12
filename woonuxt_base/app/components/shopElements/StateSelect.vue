@@ -32,7 +32,7 @@ watch(
 
 <template>
   <select @change="select" v-if="countryStatesDict[props.countryCode]?.length" class="h-[42px]">
-    <option value="" :selected="!props.modelValue">Select a state</option>
+    <option value="" :selected="!props.modelValue">Sélectionnez une région</option>
     <option v-for="state in countryStatesDict[props.countryCode]" :key="state.code" :value="state.code" :selected="state.code === props.modelValue">
       {{ state.name }}
     </option>
